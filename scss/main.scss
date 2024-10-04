@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+// style
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans", sans-serif;
+  background-color: white;
+}
+
+.navbar {
+  border-bottom: 1px solid gray;
+  background-color: white;
+  .navbar-brand {
+    img {
+      width: 70%;
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        font-weight: 500;
+        font-size: 1rem;
+        color: black;
+        position: relative;
+
+        // Animasi garis bawah
+        &::after {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 2px;
+          background-color: red;
+          bottom: 0;
+          left: 0;
+          transition: width 0.3s ease-in-out;
+        }
+
+        // Hover effect
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// hero
+.hero {
+  padding: 6rem 1rem 2rem;
+  .icon-hero {
+    img {
+      width: 20%;
+      box-shadow: 5px 5px 10px 0 lightgray;
+    }
+
+    h3 {
+      color: gray;
+      font-weight: 600;
+
+      span {
+        color: red;
+      }
+    }
+  }
+
+  //   accordion
+
+  .accordion-item {
+    border: 0;
+    padding: 0;
+    font-size: 0.9rem;
+    line-height: 1.8em;
+
+    .accordion-header {
+      button {
+        background-color: transparent;
+        color: red;
+        font-size: 0.9rem;
+        border: 0;
+      }
+    }
+
+    .accordion-collapse {
+      .accordion-body {
+        padding: 1rem 0;
+      }
+    }
+  }
+}
+
+// footer
+.footer {
+  .footer-link {
+    .nav-link {
+      font-size: 0.9rem;
+      color: gray;
+    }
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+    border-top: 1px solid gray;
+    padding-top: 1rem;
+  }
+}
+
+// responsive
+
+// mobile landscape
+@media screen and (min-width: 576px) {
+  .navbar {
+    .navbar-brand {
+      img {
+        width: 30%;
+      }
+    }
+  }
+
+  .hero {
+    padding: 8rem 1rem;
+  }
+}
+
+// tablet
+@media screen and (min-width: 768px) {
+  .navbar {
+    .navbar-brand {
+      img {
+        width: 25%;
+      }
+    }
+  }
+
+  //   footer
+  .footer {
+    .footer-link {
+      display: flex;
+      flex-direction: row;
+      .nav-link {
+        font-size: 0.9rem;
+        color: gray;
+        margin-right: 1.25rem;
+      }
+    }
+  }
+}
+
+// lg
+
+@media screen and (min-width: 992px) {
+  .navbar {
+    .navbar-brand {
+      img {
+        width: 17.5%;
+      }
+    }
+  }
+
+  //   hero
+  .hero {
+    padding: 7rem 1rem 2rem;
+    .icon-hero {
+      img {
+        width: 10%;
+      }
+    }
+  }
+}
